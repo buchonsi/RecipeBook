@@ -1,4 +1,4 @@
-package com.yoons.recipebook.user.domain;
+package com.yoons.recipebook.model;
 
 import com.yoons.recipebook.baisc.domain.BaseTimeEntity;
 import lombok.Builder;

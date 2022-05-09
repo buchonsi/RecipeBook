@@ -1,4 +1,4 @@
-package com.yoons.recipebook.recipe.domain;
+package com.yoons.recipebook.model;
 
 import lombok.Builder;
 import lombok.Getter;
