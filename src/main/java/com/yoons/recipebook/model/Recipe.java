@@ -16,6 +16,9 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+
+
+
 //    @TODO enum 타입 만들기...
 
 }

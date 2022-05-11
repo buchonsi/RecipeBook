@@ -1,4 +1,4 @@
-package com.yoons.recipebook.user.controller;
+package com.yoons.recipebook.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
