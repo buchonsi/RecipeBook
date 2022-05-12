@@ -24,12 +24,13 @@ public class User extends BaseTimeEntity {
 
     private String email;
 
-    public User() {
+    public User(){
     }
 
-    public User(Long userId, String name, String email) {
+    public User(Long userId, String name, String password, String email) {
         UserId = userId;
         this.name = name;
+        this.password = password;
         this.email = email;
     }
 }

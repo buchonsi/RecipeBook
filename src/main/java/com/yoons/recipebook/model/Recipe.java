@@ -4,21 +4,29 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 @Entity
 @Getter @Setter
 @Builder
 public class Recipe {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ManyToOne
+    private RecipeType recipeType;
 
+    @Enumerated(EnumType.STRING)
+    private RecipeLevel recipeLevel;
 
+    public Recipe() {
+    }
 
-//    @TODO enum 타입 만들기...
-
+    public Recipe(Long id, RecipeType recipeType, RecipeLevel recipeLevel) {
+        this.id = id;
+        this.recipeType = recipeType;
+        this.recipeLevel = recipeLevel;
+    }
 }
