@@ -7,21 +7,17 @@ import javax.persistence.*;
 @Entity
 @Getter @Setter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class Recipe {
+@AllArgsConstructor
+public class RegisteredRecipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(length = 4000)
-    private String comment;
-
-    @Enumerated(EnumType.STRING)
-    private RecipeLevel recipeLevel;
+    @ManyToOne
+    private Recipe recipe;
 
     @ManyToOne
-    private RecipeType recipeType;
-
+    private User user;
 }

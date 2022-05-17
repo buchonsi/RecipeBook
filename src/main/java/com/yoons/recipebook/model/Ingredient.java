@@ -5,20 +5,20 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RecipeType {
+public class Ingredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
-    private String typeName;
+    private String ingredientName;
 
     @Column(nullable = false)
-    private int typeSeq;
-
+    private String unit;
 }

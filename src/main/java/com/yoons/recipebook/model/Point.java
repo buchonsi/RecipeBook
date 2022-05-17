@@ -21,13 +21,13 @@ public class Point extends BaseTimeEntity {
     private Long id;
 
     @ColumnDefault("0")
-    private int quantity;
+    private int amount;
 
     public Point() {
     }
 
-    public Point(Long id, int quantity) {
+    public Point(Long id, int amount) {
         this.id = id;
-        this.quantity = quantity;
+        this.amount = amount;
     }
 }
