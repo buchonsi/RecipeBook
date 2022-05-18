@@ -25,33 +25,28 @@ class UserRepositoryTest {
 
     @AfterEach
     void afterEach() {
-//        userRepository.deleteAll();
+        userRepository.deleteAll();
     }
 
     //생성
     @Test
     void 유저_생성(){
-//        //given
-//        User userA = User.builder()
-//                .name("윤").userId("buchonsi").password("1234")
-//                .build();
-//
-//        //when
-//        User savedUser = userRepository.save(userA);
-//        User findedUser = userRepository.findByUserId("buchonsi").get();
-//
-//        //then
-//        assertThat(savedUser).isEqualTo(findedUser);
-//        assertThat(savedUser).isEqualTo(userA);
+        //given
+        User userA = User.builder()
+                .name("윤").userId("buchonsi").password("1234")
+                .build();
+
+        //when
+        User savedUser = userRepository.save(userA);
+//        User foundUser = userRepository.findByUserId("buchonsi").get();
+
+        //then
+        assertThat(savedUser).isEqualTo(userA);
 
     }
     //조회
-    @Test
+//    @Test
     void 전체조회(){
-        List<User> userList = userRepository.findAll();
-        if(userList == null) {
-            System.out.println("test");
-        }
     }
 
     //아이디로 조회
