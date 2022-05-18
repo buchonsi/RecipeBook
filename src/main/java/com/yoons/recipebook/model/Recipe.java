@@ -15,6 +15,9 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(nullable = false)
+    private String recipeTitle;
+
     @Column(length = 4000)
     private String comment;
 

@@ -17,6 +17,9 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+### 개인 추가 ###
+application-server.properties
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
